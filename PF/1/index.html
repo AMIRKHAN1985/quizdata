@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Code Quiz</title>
+</head>
+
+<body>
+    <!-- Start Quiz Button -->
+    <div class="startButton"><button>Start Quiz</button></div>
+    <!-- Display Box Detailing the Program -->
+    <div class="displayBox">
+        <div class="displayBoxTitle">
+            <span>Rules:</span>
+        </div>
+        <div class="rulesList">
+            <div class="rules">1. You will have <span>10 minutes for 10 Questions</span> to finish this quiz.</div>
+            <div class="rules">2. For every question answered correctly, you will get 1 marks.</div>
+            <div class="rules">3. For every question answered incorrectly, <span>0.25 marks</span> will be deducted from
+                total marks.</div>
+            <div class="rules">4. Once the quiz is finished or the timer reaches zero, your score will be shown, and you
+                will be given a chance to submit your highscore.</div>
+        </div>
+        <div class="displayBoxButtons">
+            <button class="quit">Exit Quiz</button>
+            <button class="continue">Continue</button>
+        </div>
+    </div>
+    <!-- Quiz Box -->
+    <div class="quizBox">
+        <!-- Quiz Box Header -->
+        <header>
+            <div class="quizBoxTitle">Code Quiz</div>
+            <div class="quizBoxTimer">
+                <div class="timerText">Time Left:</div>
+                <div class="timerSeconds">10</div>
+            </div>
+        </header>
+        <!-- Quiz Box Body -->
+        <div class="codeanswer">
+
+            <div class="qImg" id="qImg"></div>
+
+
+            <section>
+                <div class="question">
+
+                </div>
+                <div class="option1">
+                    <div class="option"></div>
+                    <!-- <div class="qImg" id="qImg"></div> -->
+                    <div class="answerList"></div>
+                </div>
+
+            </section>
+        </div>
+        <!-- Quiz Box Footer -->
+        <footer>
+            <div class="questionProgressBar">
+                <p><span class="questionNumberOn">1</span> of <span class="questionNumberTotal">10</span> Questions</p>
+            </div>
+        </footer>
+    </div>
+    <!-- Score Results -->
+    <div class="scoreResults">
+        <div class="completeQuiz">
+            <div class="trophy">
+                <i class="fa fa-trophy" aria-hidden="true"></i>
+            </div>
+            <div class="finishText">You finished the quiz!</div>
+            <div class="resultText">
+                <p>You got <span class="answersCorrect">0</span> out of <span class="questionNumberTotal">10</span>
+                    marks</p>
+            </div>
+        </div>
+        <form>
+            <span class="inputContent">
+                <input type="text" id="inputInitials" name="initials" placeholder="Enter Initials" autocomplete="off">
+            </span>
+            <div class="scoreResultButtons">
+                <button class="submitButton">Submit</button>
+                <button class="viewHighscore hide">View HighScore</button>
+                <div class="result"><button>Quiz Solution</button></div>
+            </div>
+        </form>
+    </div>
+    <div class="highscore">
+        <div class="title">
+            <span>HighScores</span>
+        </div>
+        <ul class="users">
+        </ul>
+        <form>
+            <div class="scoreResultButtons">
+                <button class="backButton">Back</button>
+                <!-- <button class="deleteScores">Delete Highscores</button> -->
+                <button class="result">Quiz Solution</button>
+            </div>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
