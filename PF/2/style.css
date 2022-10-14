@@ -1,0 +1,498 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: 'Cabin', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background:#fff;
+    margin-top: 2%;
+    overflow: hidden;
+      
+}
+
+li {
+    list-style: none;
+}
+
+/* Start Quiz Button Positioning */
+/* Display Box Positioning */
+/* Score Results Positioning */
+.startButton,
+.displayBox,
+.quizBox,
+.scoreResults,
+.highscore {
+    left: 50%;
+ 
+    top: 50%;
+   
+    transform: translate( -50%, -50% ); 
+    position: absolute;
+}
+
+.displayBox.activeDisplayBox,
+.quizBox.activeQuizBox,
+.scoreResults.activeResults,
+.highscore.activeHighScore {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Start Quiz Button Styling */
+.startButton button{
+    background: blue;
+    border-color: #ffdab9;
+    border-radius: 5px;
+    color: #ffdab9;
+    cursor: pointer;
+    font-size: 30px;
+    font-weight: 500;
+    outline:none;
+    padding: 15px 30px;
+}
+
+/* Display Box Styling */
+.displayBox {
+    background: #fff;
+    border-radius: 5px;
+    color: black;
+    opacity: 0;
+    pointer-events: none;
+    width: 100vw;
+    height: 100vh;
+}
+
+/* Display Box Title Styling */
+.displayBox .displayBoxTitle,
+.highscore .title {
+    align-items: center;
+    border-bottom: 1px solid blue;
+    display: flex;
+    font-size: 30px;
+    font-weight: 500px;
+    height: 60px;
+    padding: 0 35px;
+    width: 100vw;
+}
+
+/* Rules List Styling */
+.displayBox .rulesList {
+    padding: 15px 40px;
+}
+
+/* Rules List Styling */
+.displayBox .rulesList .rules {
+    font-size: 20px;
+    margin: 5px 0;
+}
+
+/* Rules Span Styling */
+.displayBox .rulesList .rules span {
+    color: black;
+    font-weight: 500;
+}
+
+/* Display Box Buttons Styling */
+.displayBox .displayBoxButtons {
+    align-items: center;
+    border-top: 1px solid #797777;
+    display: flex;
+    height: 50vh;
+    justify-content: flex-end;
+    padding: 0 50px;
+}
+
+.highscore .scoreResultButtons {
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid #797777;
+    padding: 10px;
+}
+/* Display Box Buttons Styling */
+/* Initials Submit Button Styling */
+.displayBox .displayBoxButtons button,
+.scoreResults .scoreResultButtons button,
+.scoreResults button,
+.highscore button {
+    border-color: #ffdab9;
+    border-radius : 5px;
+    color: #ffdab9;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 500;
+    height: 30px;
+    margin: 0 5px;
+    transition: all 0.3s ease;
+    min-width: 100px;
+    padding: 0px 5px;
+ 
+}
+
+/* Customizing start button */
+/* Customizing display buttons */
+/* Customizing score result buttons */
+.displayBoxButtons button.continue,
+.scoreResults .scoreResultButtons button,
+.scoreResults button,
+.highscore button {
+    color: #ffdab9;
+    background:blue;
+   
+}
+
+.startButton button:hover,
+.displayBoxButtons button.continue:hover,
+.scoreResults .scoreResultButtons button:hover,
+.scoreResults button:hover,
+.highscore button:hover {
+    background: rgb(6, 6, 68);
+}
+
+.displayBoxButtons button.quit {
+    color:#ffdab9;
+    background:  blue;
+}
+
+.displayBoxButtons button.quit:hover {
+    color: #ffdab9;
+    background :rgb(6, 6, 68);
+}
+
+/* Quiz Box Styling */
+.quizBox {
+    background: #fff;
+    border-radius: 5px;
+    color: black;
+    opacity: 0;
+    pointer-events: none;
+    width: 100vw;
+    height: 100vh;
+    
+}
+
+/* Quiz Box Header Styling */
+.quizBox header {
+    align-items: center;
+    border-radius: 5px 5px 0 0;
+    display: flex;
+    height: 10vh;
+    justify-content: space-between;
+    padding: 0 30px;
+}
+
+/* Quiz Box Title Styling */
+.quizBox header .quizBoxTitle {
+    font-size: 20px;
+}
+
+/* Quiz Box Title and Timer Styling */
+.quizBox header .quizBoxTitle,
+.quizBox header .quizBoxTimer {
+    background:orangered;
+    border: 1px solid #5d5b5b;
+    border-radius: 5px;
+    color: #fff ;
+    font-weight: 500;
+    padding: 10px;
+    user-select: none;
+}
+
+/* Quiz Box Timer Styling */
+.quizBox header .quizBoxTimer {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    width: 130px;
+}
+
+.quizBox header .quizBoxTimer .timerSeconds {
+    background: #2e2c2c;
+    border-radius: 5px;
+    padding: 3px;
+}
+
+/* Quiz Box Section Styling */
+.quizBox .codeanswer {
+    display: flex;
+    height:75vh;
+    border: 2px solid black;
+       
+}
+
+
+
+/* Quiz Box Section Styling */
+.quizBox section {
+    padding: 25px 30px;
+    border: 2px solid black;
+    width: 50%;
+    
+   
+    
+}
+
+/* Quiz Box Section Question Styling */
+.quizBox section .question {
+    font-size: 20px;
+    font-weight: 600;
+   
+    
+}
+
+
+
+/* Quiz Box Section Question Styling */
+.quizBox .codeanswer .qImg {
+    display: flex;
+    padding: 20px 0px;
+    overflow-y: scroll;
+    border: 2px solid black;
+    width: 50%;
+  
+    padding:10px;
+    
+}
+
+/* Quiz Box Section Answers Styling */
+.quizBox section .answerList {
+    display: block;
+    padding: 20px 0px;
+    overflow-y: scroll;
+}
+
+.quizBox section .answerList .option1 {
+    display: flex;
+    overflow-y: scroll;
+   
+}
+
+.quizBox section .answerList .answer {
+    align-items: center;
+    background:#fff;
+    border: 1px solid #797777;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    margin-bottom: 7.5px;
+    justify-content: space-between;
+    padding: 10px;
+    transition: all 0.3s ease;
+    color:black;
+}
+
+section .answerList .answer:hover {
+    background: rgb(5, 5, 216,0.7);
+    color: #fff;
+}
+
+/* Quiz Box Footer Styling */
+.quizBox footer {
+    align-items: center;
+    border-top: 1px solid #797777;
+    display: flex;
+    height: 50px;
+    margin: 10px;
+    padding: 0px 10px;
+}
+
+.quizBox footer .questionProgressBar {
+    background:orangered;
+    border-radius: 5px;
+    color: #fff ;
+    padding: 10px;
+    user-select: none;
+}
+
+/* Score Results Styling */
+.scoreResults {
+    align-items: center;
+    background: #fff;
+    border-radius: 0px;
+    display: block;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    width: 100vw;
+    height: 100vh;
+    margin-top: 20px;
+   
+    opacity: 0;
+    pointer-events: none;
+    overflow-x: scroll;
+    overflow-y: scroll;
+}
+
+.scoreResults .trophy {
+    color:gold;
+    font-size: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+.scoreResults .finishText {
+    color: black;
+    display: flex;
+    font-size: 20px;
+    font-weight: 500;
+    justify-content: center;
+    padding: 5px;
+}
+
+.scoreResults .resultText {
+    color: black;
+    font-size: 15px;
+    font-weight: 400;
+    padding: 5px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.scoreResults form {
+    border-top: 1px solid #797777;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+#inputInitials {
+    margin: 10px auto;
+    padding: 5px 0px;
+    text-align: center;
+}
+
+.hide {
+    display: none;
+}
+
+.highscore {
+    background: #fff;
+    border-radius: 5px;
+    color: black;
+    width: 55%;
+    opacity: 0;
+    pointer-events: none;
+    min-width: 500px;
+}
+
+.inputContent {
+    margin: 0px auto;
+    color: black;
+    width: '100%';
+    padding: 0px 0px 10px;
+}
+.users {
+    padding: 15px 40px;
+}
+
+.user {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0px;
+}
+
+.answerlist {
+    margin: 10px 10px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 580px) {
+    .displayBox.activeDisplayBox,
+    .quizBox.activeQuizBox,
+    .scoreResults.activeResults,
+    .highscore.activeHighScore {
+        width: 100%;   
+    }
+    .quizBox header {
+        flex-direction: row;
+        height: 10vh !important;
+        justify-content: space-around;
+        margin-top: 0px;
+    }
+
+    .quizBox header.quizBoxTitle,
+    .quizBox header.quizBoxTimer {
+        margin-top: 5px;
+    }
+
+    .displayBoxButtons {
+        padding: 10px 50px;
+        justify-content: center;
+        flex-direction: column-reverse;
+        height: 80px !important;
+    }
+
+    .displayBoxButtons button.continue,
+    .displayBoxButtons button.quit {
+        padding: 0px 2.5px;
+        margin-bottom: 5px;
+    }
+
+    .displayBoxButtons button.continue {
+        margin: 5px 0px;
+    }
+
+    .scoreResultButtons {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .scoreResultButtons button.quit,
+    .scoreResultButtons button.viewHighscore,
+    .scoreResultButtons button.backButton,
+    .scoreResultButtons button.submitButton,
+    .scoreResultButtons button.deleteScores {
+        margin: 2.5px;
+        padding: 2.5px;
+        height: auto;
+    }
+
+    .inputContent {
+        text-align: center;
+    }
+
+    .highscore {
+        min-width: 360px;
+    }
+
+    .quizBox .codeanswer {
+        display: inline;
+        height:75vh;
+       
+        width:100%
+           
+    }
+    .quizBox section {
+        padding: 25px 30px;
+        
+        width: 100%;  
+        
+    }
+    .quizBox .codeanswer .qImg {
+        display: flex;
+        overflow-y: scroll;
+        
+        width: 100%;
+      
+    padding:10px;
+        
+    }
+    
+    
+}
+.result1{
+   margin:0px 10px;
+   height: 100vh;
+   width: 100%;
+}
+
+
+.quizBox section .answerList .option1 {
+    display: flex;
+    overflow-y: scroll;
+   
+}
